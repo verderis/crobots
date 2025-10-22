@@ -1,48 +1,41 @@
-🛡️ Mini-Crobots en Python
+Mini-Crobots 🛡️
 
-Mini-Crobots es un proyecto educativo en Python inspirado en el clásico juego Crobots, donde pequeños robots programables se enfrentan en una arena. El objetivo del proyecto es enseñar conceptos de programación, lógica y algoritmos de manera divertida, a través de la creación de bots autónomos que se mueven y disparan en una simulación.
+Mini-Crobots es un proyecto educativo en Python inspirado en el clásico juego Crobots.
+Permite programar robots autónomos que se enfrentan en una arena con obstáculos, proyectiles y estrategias personalizadas.
 
-🎯 Objetivos
+✅ Aprende programación, lógica y algoritmos de manera divertida.
+🎯 Visualiza los combates con GIFs animados y prueba tus propios bots.
 
-Crear un entorno de simulación simple para robots autónomos.
+🎬 Cómo se ve
 
-Enseñar a programar estrategias usando Python.
 
-Permitir la incorporación de bots personalizados cargados automáticamente desde la carpeta bots/.
+Mini-Crobots en acción: los robots navegan, esquivan obstáculos y disparan proyectiles.
 
-Visualizar los combates mediante un GIF animado, apto para JupyterLab.
+🚀 Características
 
-Introducir conceptos de sensores, obstáculos y colisiones de manera didáctica.
+Arena de combate rectangular con robots autónomos.
 
-⚙️ Características
+Obstáculos que bloquean robots y proyectiles.
 
-Arena de combate rectangular con dimensiones configurables.
+Bots personalizables cargados automáticamente desde la carpeta bots/.
 
-Robots con nombre, salud, ángulo de movimiento y disparos.
+Movimiento, disparos y colisiones simples.
 
-Proyectiles que interactúan con robots y obstáculos.
-
-Obstáculos aleatorios que bloquean robots y proyectiles.
-
-Bots independientes con comportamiento programable en Python (decision()).
-
-Generación automática de GIFs animados del combate.
-
-Diseño modular y sencillo para estudiantes.
+Generación automática de GIFs animados de los combates.
 
 🗂️ Estructura del proyecto
 mini-crobots/
 │
-├─ bots/                 # Carpeta donde se crean los bots
+├─ bots/                 # Carpeta para tus bots
 │   ├─ ping_bot.py
 │   ├─ seeker_bot.py
 │   ├─ berserker_bot.py
 │   └─ sniper_bot.py
 │
-├─ main.py               # Motor de la arena y simulación
+├─ main.py               # Motor de simulación
 └─ README.md             # Información del proyecto
 
-🚀 Cómo ejecutar
+⚡ Instalación rápida
 
 Clonar el repositorio:
 
@@ -54,8 +47,9 @@ Instalar dependencias:
 
 pip install numpy matplotlib pillow
 
+🏁 Cómo ejecutar
 
-Ejecutar la simulación desde Python o JupyterLab:
+Desde Python o JupyterLab:
 
 from main import ejecutar_combate
 
@@ -63,39 +57,43 @@ ganador, gif = ejecutar_combate()
 print("Ganador:", ganador)
 
 
-Visualizar el GIF en JupyterLab:
+En JupyterLab, para mostrar el GIF:
 
 from IPython.display import Image
 Image(filename=gif)
 
-🛠️ Cómo crear tu propio bot
+🤖 Crear tu propio bot
 
-Crear un archivo mi_bot.py dentro de la carpeta bots/.
+Crear un archivo mi_bot.py dentro de bots/.
 
-Definir la clase Bot con el constructor __init__(self, robot) y el método decision(self).
+Definir la clase Bot:
 
-El método decision() puede modificar:
+class Bot:
+    def __init__(self, robot):
+        self.robot = robot
+        self.nombre = "MiBot"
 
-self.robot.angulo → dirección de movimiento
+    def decision(self):
+        # Cambiar ángulo
+        self.robot.angulo = ...
+        # Disparar proyectiles
+        self.robot.arena.disparar(self.robot)
 
-self.robot.arena.disparar(self.robot) → disparar proyectiles
 
-Al ejecutar ejecutar_combate(), tu bot será cargado automáticamente.
+Tu bot se cargará automáticamente al ejecutar la simulación.
 
 📚 Aprendizaje
 
-Este proyecto permite a estudiantes aprender:
-
 Programación orientada a objetos en Python.
 
-Lógica de toma de decisiones y estrategia.
+Lógica de toma de decisiones y estrategias.
 
-Uso de librerías científicas (numpy, matplotlib) para simulación.
+Uso de numpy y matplotlib para simulación.
 
 Manejo de colisiones y físicas simples.
 
 Generación de animaciones y visualización de datos.
 
-🔖 Licencia
+📝 Licencia
 
-Este proyecto es open-source. Puedes usarlo y modificarlo con fines educativos.
+Este proyecto es open-source (MIT) y puede usarse con fines educativos.
