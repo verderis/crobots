@@ -7,6 +7,7 @@ Permite programar robots autónomos que se enfrentan en una arena con obstáculo
 🎯 Visualiza los combates con GIFs animados y prueba tus propios bots.
 
 🎬 Cómo se ve
+![Texto alternativo](media/combate.gif)
 
 
 Mini-Crobots en acción: los robots navegan, esquivan obstáculos y disparan proyectiles.
